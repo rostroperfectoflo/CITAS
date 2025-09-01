@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CITAS - ROSTRO PERFECTO</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <h1>CITAS - ROSTRO PERFECTO</h1>
+
+  <!-- Registro Empresa (solo 1 vez) -->
+  <div id="empresaContainer">
+    <h2>Registro Empresarial</h2>
+    <form id="formEmpresa">
+      <input type="text" id="nombreEmpresa" placeholder="Nombre Empresa" required>
+      <input type="email" id="correoEmpresa" placeholder="Correo Empresa" required>
+      <input type="text" id="paisEmpresa" placeholder="País" required>
+      <input type="text" id="whatsappEmpresa" placeholder="WhatsApp Empresa" required>
+      <input type="text" id="ubicacionEmpresa" placeholder="Ubicación" required>
+      <button type="submit">Guardar Empresa</button>
+    </form>
+  </div>
+
+  <!-- Registro Citas -->
+  <div id="citaContainer" style="display:none;">
+    <h2>Registrar Cita</h2>
+    <form id="formCita">
+      <input type="text" id="nombrePaciente" placeholder="Nombre completo" required>
+      <input type="datetime-local" id="fechaCita" required>
+      <input type="text" id="whatsappPaciente" placeholder="WhatsApp paciente" required>
+      <input type="number" id="edadPaciente" placeholder="Edad" required>
+      <input type="text" id="procedimiento" placeholder="Procedimiento" required>
+      <button type="submit">Registrar Cita</button>
+    </form>
+
+    <h2>Próximas 6 Citas</h2>
+    <ul id="listaCitas"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
